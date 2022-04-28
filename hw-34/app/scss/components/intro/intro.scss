@@ -1,0 +1,44 @@
+.intro {
+    @include sections-paddings(110px, 0);
+    background-color: $primary;
+    position: relative;
+    &__title {
+        @include title-light;
+    }
+    &__subtitle {
+        @include subtitle-light;
+        margin-bottom: 35px;
+    }
+    &__input {
+        border: none;
+    }
+    &__label.user-icon {
+        @include input('../img/user.png');
+    }
+    &__label.email-icon {
+        @include input('../img/mail.png');
+        &:before {
+            width: 17px;
+        }
+    }
+    &__label.phone-icon {
+        @include input('../img/phone.png');
+    }
+    &__submit-button {
+        @include button;
+        padding: 14px 40px;
+    }
+    &__laptop {
+        width: 645px;
+        margin-bottom: -60px;
+    }
+    &__dots {
+        background-image: url('../img/dots.png');
+        width: 60px;
+        height: 15px;
+        position: absolute;
+        bottom: -95px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

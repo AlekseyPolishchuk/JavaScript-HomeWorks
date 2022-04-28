@@ -1,0 +1,56 @@
+.tariffs {
+    background-color: #e7edf3;
+    @include sections-paddings(135px, 160px);
+    &__title {
+        @include title-dark;
+    }
+    &__subtitle {
+        @include subtitle-dark;
+        margin-bottom: 0;
+    }
+    &__item {
+        text-transform: uppercase;
+        background-color: #fff;
+        border: 1px solid #ccd5df;
+        border-radius: 4px;
+        padding: 55px 30px 50px 30px;
+        text-align: center;
+        width: 30%;
+        transition-duration: 0.2s;
+
+        &:hover {
+            color: $text-light;
+            background-color: $primary;
+            transform: scale(1.1);
+
+            .tariffs__price {
+                @include price-font('../img/usd-price-active.png');
+                color: #fff;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 19px;
+        }
+    }
+    &__item-title {
+        font-size: 25px;
+        font-weight: 300;
+    }
+    &__terms {
+        margin-bottom: 35px;
+    }
+    &__button {
+        @include button;
+        padding: 11px 20px;
+        margin: 0 auto;
+    }
+    &__price {
+        @include price-font('../img/usd-price.png');
+        color: $button-color;
+    }
+    &__price-sub {
+        display: block;
+        margin-bottom: 30px;
+    }
+}

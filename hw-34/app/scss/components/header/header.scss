@@ -1,0 +1,24 @@
+.header {
+    padding: 22px 0 23px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    &__link {
+        transition-duration: 0.2s;
+        display: inline-block;
+        color: $text-color1;
+        text-transform: uppercase;
+        font-size: $label;
+        border-radius: 3px;
+        padding: 7px 20px;
+
+        &:hover {
+            background-color: $button-color;
+            color: $text-light;
+        }
+    }
+}

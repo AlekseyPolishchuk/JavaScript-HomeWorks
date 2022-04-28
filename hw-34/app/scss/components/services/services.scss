@@ -1,0 +1,71 @@
+.services {
+    @include sections-paddings(200px, 65px);
+
+    &__title {
+        @include title-dark;
+    }
+
+    &__subtitle {
+        @include subtitle-dark;
+    }
+
+    &__item {
+        padding-left: 85px;
+        width: 50%;
+        margin-bottom: 65px;
+        &-title {
+            text-transform: uppercase;
+            font-size: $sub-title;
+            color: $text-color2;
+            font-weight: bold;
+        }
+        &-text {
+            margin-bottom: 0;
+        }
+        &.watch-icon {
+            @include services-item('../img/watch.png');
+            &:before {
+                width: 45px;
+                height: 46px;
+            }
+        }
+        &.gear-icon {
+            @include services-item('../img/gear.png');
+            &:before {
+                width: 47px;
+                height: 48px;
+            }
+        }
+        &.hat-icon {
+            @include services-item('../img/hat.png');
+            &:before {
+                width: 62px;
+                height: 44px;
+            }
+        }
+        &.rocket-icon {
+            @include services-item('../img/rocket.png');
+            &:before {
+                width: 50px;
+                height: 51px;
+            }
+        }
+        &.peace-icon {
+            @include services-item('../img/peace.png');
+            &:before {
+                width: 47px;
+                height: 47px;
+            }
+        }
+        &.usd-icon {
+            @include services-item('../img/usd.png');
+            &:before {
+                width: 31px;
+                height: 55px;
+            }
+        }
+        &:nth-child(odd) {
+            padding-right: 90px;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.process {
+    @include sections-paddings(130px, 150px);
+
+    &__title {
+        @include title-dark;
+    }
+
+    &__subtitle {
+        @include subtitle-dark;
+    }
+
+    &__item {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-title {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: $text-color2;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &-text {
+            margin-bottom: 0;
+            text-align: center;
+        }
+        &-img {
+            position: relative;
+            margin-bottom: 100px;
+        }
+        &-img.headphones {
+            @include process-img(
+                '../img/headphones.png',
+                '../img/arrow_1.png',
+                128px,
+                32px,
+                -25px,
+                150px
+            );
+            width: 71px;
+            height: 61px;
+        }
+        &-img.padlock {
+            @include process-img(
+                '../img/padlock.png',
+                '../img/arrow_2.png',
+                128px,
+                32px,
+                65px,
+                120px
+            );
+            width: 51px;
+            height: 66px;
+        }
+        &-img.cloud {
+            @include process-img(
+                '../img/cloud.png',
+                '../img/arrow_1.png',
+                128px,
+                32px,
+                -25px,
+                150px
+            );
+            width: 82px;
+            height: 61px;
+        }
+        &-img.like {
+            background-image: url('../img/like.png');
+            background-size: cover;
+            width: 69px;
+            height: 67px;
+        }
+    }
+    &__button-lable {
+        display: flex;
+        justify-content: center;
+    }
+    &__button {
+        @include button;
+        padding: 15px 20px;
+        margin: 0 auto;
+    }
+    &__item:not(:last-child) {
+        padding-right: 45px;
+    }
+    &__item:not(:first-child) {
+        padding-left: 45px;
+    }
+}

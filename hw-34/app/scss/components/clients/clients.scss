@@ -1,0 +1,72 @@
+.clients {
+    background-color: $secondary;
+    @include sections-paddings(130px, 150px);
+
+    &__title {
+        @include title-light;
+    }
+
+    &__subtitle {
+        @include subtitle-light;
+    }
+
+    &__item {
+        display: flex;
+        width: 45%;
+        background-color: #fff;
+        padding: 50px 30px;
+
+        &:nth-child(odd) {
+            margin-right: 20px;
+        }
+        &:nth-child(even) {
+            margin-left: 20px;
+        }
+        &:first-child,
+        &:nth-child(2) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 0;
+    }
+    &__img {
+        width: 121px;
+        height: 121px;
+        margin-right: 32px;
+    }
+    &__name {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        color: #f6772c;
+    }
+    &__position {
+        color: #99a9ae;
+        font-weight: normal;
+    }
+    &__text {
+        position: relative;
+        padding-top: 10px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-image: url('../img/quotes_1.png');
+            width: 11px;
+            height: 9px;
+            top: 8px;
+            left: -19px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/quotes_2.png');
+            width: 11px;
+            height: 9px;
+            bottom: 2px;
+            right: 98px;
+        }
+    }
+}

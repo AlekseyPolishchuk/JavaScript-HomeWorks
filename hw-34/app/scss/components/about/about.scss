@@ -1,0 +1,28 @@
+.about {
+    background-color: $secondary;
+    &__picture {
+        background-image: url('../img/about-picture.jpg');
+        background-size: cover;
+        width: 50%;
+    }
+    &__content {
+        @include sections-paddings(165px, 175px);
+        padding-left: 80px;
+        width: 37%;
+    }
+    &__title {
+        @include title-light;
+        text-align: start;
+        margin-bottom: 30px;
+    }
+    &__text {
+        color: $text-light;
+        margin-bottom: 30px;
+        line-height: 24px;
+    }
+    &__button {
+        @include button;
+        padding: 17px 35px 17px 35px;
+        border: 1px solid #e7ad48;
+    }
+}
